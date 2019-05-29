@@ -1,4 +1,4 @@
-#udemyGoLangCourse
+# udemyGoLangCourse
 
 This repository contains assigments and solutions from Todd McLeod's Udemy course on GoLang: 
 <i>Learn How To Code: Google's Go (golang) Programming Language </i> https://www.udemy.com/course/learn-how-to-code/
