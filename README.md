@@ -19,4 +19,4 @@ brew install go
 ```
 
 ### Usage
-1. Clone the repository to your designated GoPath e.g. `go get https://github.com/patalwell/udemyGoLangCourse.git`
+1. Clone the repository to your designated GoPath e.g. `go get -t github.com/patalwell/udemyGoLangCourse.git`
