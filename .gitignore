@@ -16,3 +16,7 @@
 ### Go Patch ###
 /vendor/
 /Godeps/
+
+# Everything but go files and readme.md
+!**/*.go
+!**/*.md
