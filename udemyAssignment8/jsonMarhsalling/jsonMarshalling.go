@@ -23,7 +23,7 @@ type JsonPayload struct {
 func main() {
 
 	//Json Marshalling
-	rawByteSlice := []byte(`{
+	rawData := `{
   "id": "cdc73f9d-aea9-11e3-9d5a-835b769c0d9c",
   "detail-type": "Scheduled Event",
   "source": "aws.events",
@@ -32,9 +32,9 @@ func main() {
   "region": "us-east-1",
   "resources": [
     "arn:aws:events:us-east-1:123456789012:rule/ExampleRule"
-  ]}`)
+  ]}`
 
-	jsonArray, err := json.Marshal(rawByteSlice)
+	jsonArray, err := json.Marshal(rawData)
 	if err != nil {
 		fmt.Println("Something went wrong during marshalling: ", err)
 	}
@@ -44,7 +44,7 @@ func main() {
 
 	//Json Unmarshalling
 	var jsonPayload JsonPayload
-	err = json.Unmarshal(rawByteSlice,&jsonPayload)
+	err = json.Unmarshal([]byte(rawData),&jsonPayload)
 		if err != nil {
 			fmt.Println("Something went wrong during the unmarshalling process: ", err)
 		}
