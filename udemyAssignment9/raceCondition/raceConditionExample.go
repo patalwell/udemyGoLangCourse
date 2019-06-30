@@ -25,7 +25,7 @@ func main() {
 	var waitGroup sync.WaitGroup
 
 	//goRoutine quantity
-	const GOROUTINES = 100
+	const GOROUTINES = 10
 
 	//Add the routines to our waitGroup
 	//Will wait to exit main() until we've hit the same number of wg.Done()
@@ -42,6 +42,7 @@ func main() {
 			//increment and reassign counter
 			//Note: Each goRoutine is going to have a different instance and counter value
 			counter = instanceValue
+			fmt.Println("This is counter in a routine: ", counter)
 			waitGroup.Done()
 		}()
 		fmt.Println("numGoRoutines", runtime.NumGoroutine())
